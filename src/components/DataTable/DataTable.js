@@ -11,8 +11,6 @@ import Literature from './Literature';
 import Signatures from './Signatures';
 
 import './DataTable.css';
-import { default as arrowDown } from '../../assets/arrowDown.svg';
-import { default as arrowUp } from '../../assets/arrowUp.svg';
 
 
 // Creating a string separating each GOTerm name with a comma, to then display it in the table
@@ -88,7 +86,7 @@ export default function DataTable({ interProData }) {
                                                         [`${accession}`]: !rowsHiddenState[`${accession}`],
                                                     })
                                                 }}>
-                                                {rowsHiddenState[`${accession}`] ? <img src={arrowDown}></img> : <img src={arrowUp}></img>}
+                                                {rowsHiddenState[`${accession}`] ? <span>&#8595;</span> : <span>&#8593;</span>}
                                             </button>
                                         </td>
                                         <td>{accession}</td>
