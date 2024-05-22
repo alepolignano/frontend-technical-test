@@ -2,4 +2,3 @@ node_modules/
 *.ipynb
 *.code-workspace
 **/.DS_Store
-.github
