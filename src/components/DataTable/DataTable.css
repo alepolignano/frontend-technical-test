@@ -1,0 +1,22 @@
+.hidden-row {
+    padding: 20px !important;
+}
+
+.data-table {
+  max-height: 595px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.data-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Ensure header background color matches the table */
+
+}
+
+  .expand-btn {
+    border: none;
+    background-color: transparent;
+}
+  
