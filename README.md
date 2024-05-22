@@ -17,6 +17,18 @@ You can bootstrap your application using any library and bundler of your choice,
 
 ---
 
+## Usage
+
+Install Node.js (v22.2.0).
+
+Then, run
+
+```sh
+git clone https://github.com/alepolignano/frontend-technical-test.git
+npm install
+npm start
+```
+
 ## Tasks
 
 ### Chart aggregation - Solution: [Component](https://github.com/alepolignano/frontend-technical-test/blob/main/src/components/ChartAggregator/ChartAggregator.js)
