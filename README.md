@@ -25,6 +25,7 @@ Then, run
 
 ```sh
 git clone https://github.com/alepolignano/frontend-technical-test.git
+cd frontend-technical-test
 npm install
 npm start
 ```

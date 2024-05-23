@@ -15,7 +15,8 @@
     "vega": "^5.29.0",
     "vega-embed": "^6.25.0",
     "vega-lite": "^5.18.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@babel/plugin-proposal-private-property-in-object": "*"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "@babel/plugin-proposal-private-property-in-object": "*"
   }
 }
