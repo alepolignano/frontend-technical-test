@@ -8,6 +8,7 @@ import { Spinner } from 'react-bootstrap';
 
 import './App.css';
 import ChartAggregator from './components/ChartAggregator/ChartAggregator';
+import logo from './assets/logo.png'
 
 // Get current JSON page based on URL updated with current cursor
 async function getPage(url) {
@@ -68,7 +69,7 @@ function App() {
   return (
       <div className="App">
       <Row>
-        <h1 style = {{fontWeight: 700, textAlign: "center"}}> Repeat Entries </h1>
+        <h1 style = {{fontWeight: 700, textAlign: "center"}}> <span><img className = "logo" src = {logo}></img></span> &nbsp;Repeat Entries </h1>
       </Row>
 
       {interProData.length != 0 ?
