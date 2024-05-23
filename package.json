@@ -1,7 +1,7 @@
 {
   "name": "frontend-technical-test",
   "homepage": "https://alepolignano.github.io/frontend-technical-test",
-  "version": "1.4",
+  "version": "1.5",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "*",
