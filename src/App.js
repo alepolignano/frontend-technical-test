@@ -53,14 +53,27 @@ async function fetchData() {
 
 }
 
+// Clear storage for new versions
+function checkAppVersion(){
+  console.log(process.env.REACT_APP_VERSION)
+  if (localStorage.getItem("embl-app-version") === null || localStorage.getItem("embl-app-version") === undefined || localStorage.getItem("embl-app-version") !== process.env.REACT_APP_VERSION){
+    localStorage.clear()
+    localStorage.setItem("embl-app-version", process.env.REACT_APP_VERSION)
+  }
+}
+
 function App() {
 
   const [interProData, setInterProData] = useState([])
 
   useEffect(() => {
     const setData = async () => {
+
+      checkAppVersion();
+
       let data = await fetchData();
       setInterProData(data)
+      
       localStorage.setItem("interProData", JSON.stringify(data))
     };
     setData();
