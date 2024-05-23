@@ -86,7 +86,7 @@ export default function DataTable({ interProData }) {
                                                         [`${accession}`]: !rowsHiddenState[`${accession}`],
                                                     })
                                                 }}>
-                                                {rowsHiddenState[`${accession}`] ? <span>&#8595;</span> : <span>&#8593;</span>}
+                                                {rowsHiddenState[`${accession}`] ? <span>&#43;</span> : <span>&#8722;</span>}
                                             </button>
                                         </td>
                                         <td>{accession}</td>
