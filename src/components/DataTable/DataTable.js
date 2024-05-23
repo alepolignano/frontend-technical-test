@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ListGroup from 'react-bootstrap/ListGroup';
 
 import Literature from './Literature';
 import Signatures from './Signatures';
@@ -95,7 +92,7 @@ export default function DataTable({ interProData }) {
                                     </tr>
 
                                     {/* Create second hidden row with full colspan, with the additional info about signatures and literature */}
-                                    {<tr hidden={rowsHiddenState[`${accession}`]}>
+                                    {<tr key={`${accession}-hidden`} hidden={rowsHiddenState[`${accession}`]}>
                                         <td colSpan={4} className='hidden-row'>
                                             <Row>
                                                 <Col lg={6}>

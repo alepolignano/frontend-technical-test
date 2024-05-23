@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DataTable from './components/DataTable/DataTable';
-import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Spinner } from 'react-bootstrap';
@@ -103,8 +102,9 @@ function App() {
       
       :
       
-      <Spinner/>
-    
+      <div style = {{width: "100%", textAlign:'center'}}>
+              <Spinner/>
+      </div>    
       }
     </div>
   );

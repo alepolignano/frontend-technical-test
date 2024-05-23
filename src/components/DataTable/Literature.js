@@ -32,6 +32,8 @@ async function fetchLiteratureData(accession) {
                     mostRecentPapersIDs.push(paper)
                     maxYear = paperYear
                 }
+
+                return 0;
             })
 
             // Get most recent papers data
@@ -39,10 +41,16 @@ async function fetchLiteratureData(accession) {
             mostRecentPapersIDs.map((paperID) => {
                 mostRecentPapers.push({
                     "title": literatureData[paperID]["title"],
+                    "authors": literatureData[paperID]["authors"],
+                    "pmid": literatureData[paperID]["PMID"],
+                    "pages": literatureData[paperID]["pages"],
+                    "journal": literatureData[paperID]["medline_journal"],
                     "doi": literatureData[paperID]["DOI_URL"],
                     "year": literatureData[paperID]["year"],
                 }
                 )
+
+                return 0;
             })
 
             console.log(mostRecentPapers)
@@ -67,11 +75,11 @@ export default function Literature({ accession }) {
 
         setData();
 
-    }, [])
+    }, [accession])
 
     return (
         <>
-            <p><b>Literature</b></p>
+            <p><b>Most recent reference(s)</b></p>
             {literatureData != null ? 
                 literatureData.length > 0 ?
                 <ListGroup style={{ marginTop: 10 }}>
@@ -80,8 +88,10 @@ export default function Literature({ accession }) {
                             
                             <ListGroup.Item>
 
-                                <b>{paper.year}</b> <a href={paper.doi}  target="_blank">View paper</a>
-                                <p> {paper.title}</p>
+                                <b>{paper.year}</b> 
+                                <p> (PMID: {paper.pmid}) <p>{paper.title} <i>{paper.authors.map((author) => {return author + ", "})}</i> <small><b>{paper.journal}</b></small></p>
+                                {paper.doi ? <a href={paper.doi}  target="_blank" rel="noreferrer">View paper</a> : "No DOI found"}
+                                </p>
 
                             </ListGroup.Item>
                         )
